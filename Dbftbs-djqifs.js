@@ -18,3 +18,6 @@ Examples:
   A message 'Caesar Cipher' and a key of 1 returns 'Dbftbs Djqifs'.
   A message 'Caesar Cipher' and a key of -1 returns 'Bzdrzq Bhogdq'.
 */
+
+
+// Solution
