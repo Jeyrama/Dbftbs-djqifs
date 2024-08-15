@@ -32,3 +32,23 @@ function encryptor(key, message) {
 }
 
 // or
+
+function encryptor (key, message) {
+	key = key % 26;
+  return message
+    .split('')
+    .map((char) => {
+      const lowerCaseChar = char.toLowerCase();
+      const upperCaseChar = char.toUpperCase();
+      
+      if (lowerCaseChar === upperCaseChar) return char;
+      
+      const isUpperCase = (char === upperCaseChar);
+      const subtrahend = isUpperCase ? 65 : 97;
+      const charCode = char.charCodeAt(0);
+      const newCharCode = (charCode + key + 26 - subtrahend) % 26 + subtrahend;
+  
+      return String.fromCharCode(newCharCode);
+    })
+    .join('');
+}
