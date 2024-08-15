@@ -30,3 +30,5 @@ function encryptor(key, message) {
     return String.fromCharCode((letter.charCodeAt() - shift + key) % 26 + shift); 
   });
 }
+
+// or
